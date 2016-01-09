@@ -1,0 +1,44 @@
+
+	<!--==========
+	header section
+	==============-->
+	<div class="header">
+		<div class="row collapseSides">
+
+	<!--=== logo ===-->
+			<div class="logo">
+				<div class="small-12 medium-8 columns collapseSides">
+					<a href="/#!/" title="{{ logoLinkTitle }}"><img data-ng-src="{{ logoImage }}" alt="{{ logoImageAlt }}" /></a>
+					<a href="#" id="mobileNav"><span class="fa fa-plus-square-o"></span><span class="fa fa-minus-square-o"></span></a>
+				</div> <!-- end column -->
+			</div> <!-- end logo -->
+
+	<!--=== event logo ===-->
+			<div class="small-12 medium-4 columns">
+				<div class="event_logo">
+					<a href="/#!/events" title="{{ brLogoLinkTitle }}"><img data-ng-src="{{ brLogoImage }}" alt="{{ brLogoImageAlt }}" /></a>
+					<a href="/#!/events" title="{{ cbLogoLinkTitle }}"><img data-ng-src="{{ cbLogoImage }}" alt="{{ cbLogoImageAlt }}" /></a>
+				</div> <!-- end event logo -->
+
+	<!--=== social ===-->
+				<div class="social">
+					<ul>
+						<li><a data-ng-href="{{ socialLinkFacebook }}" title="{{ socialTitleFacebook }}" target="_blank"><span class="fa fa-facebook"></span></a></li>
+						<li><a data-ng-href="{{ socialLinkTwitter }}" title="{{ socialTitleTwitter }}" target="_blank"><span class="fa fa-twitter"></span></a></li>
+						<li><a data-ng-href="{{ socialLinkYoutube }}" title="{{ socialTitleYoutube }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
+						<li><a data-ng-href="{{ socialLinkInstagram }}" title="{{ socialTitleInstagram }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
+					</ul>
+				</div> <!-- end social -->
+			</div> <!-- end column -->
+
+	<!--=== main nav ===-->
+			<div class="main_nav">
+				<div class="small-12 columns collapseSides">
+					<ul>
+						<li data-ng-repeat="mainNav in mainNavList"><a data-ng-href="{{ mainNav.link }}">{{ mainNav.text }}</a></li>
+					</ul>
+				</div> <!-- end column -->
+			</div> <!-- end main nav -->
+
+		</div> <!-- end row -->
+	</div> <!-- end header -->

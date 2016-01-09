@@ -1,0 +1,54 @@
+@import "sass";
+
+.interactive {
+	@include fourth_color-grad;
+	padding-bottom: 15px;}
+
+.gallery_image {
+	text-align: center;
+	padding-top: 20px;
+	display: none;
+
+
+	p {
+		padding-top: 10px;
+	}
+}
+
+.news_listing {
+	padding: 10px;
+
+	&:first-child {
+		border-bottom: 1px solid $primary_dark;
+	}
+
+	> h3 a {
+		color: $primary_color;
+
+		&:hover {
+			color: $secondary_color;
+		}
+	}
+
+	> a {
+		color: $primary_color;
+
+		&:hover {
+			color: $secondary_color;
+		}
+	}
+}
+
+/* medium break */
+@media only screen and (min-width: 40.063em) {
+
+	.gallery_image {
+		display: block;
+	}
+
+}
+
+/* large break */
+@media only screen and (min-width: 64.063em) {
+
+}

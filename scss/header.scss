@@ -1,0 +1,341 @@
+@import "sass";
+
+.header {
+	position: relative;
+	background-color: $secondary_color;
+	height: 50px;
+}
+
+.social {
+	@include nomopo;
+	text-align: center;
+	z-index: 50;
+
+	> li {
+		@include nomopo;
+		display: inline-block;
+
+		&:first-child {
+
+			> a {
+				padding-left: 0;
+			}
+		}
+
+		&:last-child {
+
+			> a {
+				padding-right: 0;
+			}
+		}
+
+		> a {
+			@include linTran;
+			color: $primary_color;
+			font-size: 1.8rem;
+			padding: 10px;
+			display: block;
+			text-shadow: 1px 1px $fourth_color;
+
+			&:hover {
+				@include linTran;
+				color: $fourth_color;
+				text-shadow: 1px 1px $primary_dark;
+			}
+		}
+	}
+}
+
+.top_nav {
+	display: none;
+}
+
+.main_nav {
+	background-color: $primary_color;
+	height: 80px;
+	position: relative;
+	display: block;
+	z-index: 2;
+}
+
+.main_nav_block {
+	display: none;
+}
+
+.mobile_nav {
+	display: block;
+	background-color: $primary_color;
+	height: 35px;
+	text-align: right;
+
+	> button {
+		@include nomopo;
+		background-color: transparent;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	.btn_mobileNav {
+		font-size: 2rem;
+		color: $fourth_color;
+		padding: 0 20px;
+	}
+}
+
+.mobile_nav_list {
+	width: 100%;
+	background-color: $primary_color;
+	display: none;
+
+	> ul {
+		@include nomopo;
+		width: 100%;
+		text-align: center;
+		padding-top: 5px;
+		border-top: 1px solid $fourth_color;
+
+		> li {
+			@include nomopo;
+
+			> a {
+				display: block;
+				padding: 15px 0;
+				border-bottom: 1px solid $fourth_color;
+				color: $fourth_color;
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				text-shadow: 1px 1px $primary_dark;
+			}
+		}
+	}
+}
+
+.logo {
+	display: block;
+	width: 70%;
+	overflow: visible;
+	position: absolute;
+	z-index: 10;
+	top: -5px;
+	left: 5px;
+	text-align: left;
+
+	a {
+		display: inline-block;
+		max-width: 150px;
+	}
+}
+
+/* medium break */
+@media only screen and (min-width: 40.063em) {
+
+	.social {
+		text-align: left;
+
+		> li {
+
+			&:first-child a {
+				padding-left: 10px;
+			}
+
+			> a {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.top_nav {
+		@include nomopo;
+		display: block;
+		text-align: right;
+
+		> li {
+			@include nomopo;
+			display: inline-block;
+
+			> a {
+				@include linTran;
+				color: $primary_color;
+				text-transform: uppercase;
+				display: block;
+				padding: 13px 5px 0;
+				font-size: 1.3rem;
+				text-shadow: 0 1px $fourth_color;
+
+				&:hover {
+					@include linTran;
+					color: $fourth_color;
+					text-shadow: 0 1px $primary_dark;
+				}
+			}
+
+			&:last-child > a {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.main_nav {
+		@include primary_color-bg(0.9);
+		height: 100px;
+	}
+
+	.main_nav_block {
+		display: block;
+		position: relative;
+		height: 100px;
+		z-index: 20;
+
+		> ul {
+			@include nomopo;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+			> li {
+				@include nomopo;
+				display: inline-block;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+
+				> a {
+					@include linTran;
+					display: block;
+					padding: 10px 8px;
+					color: $fourth_color;
+					font-size: 1.4rem;
+					text-transform: uppercase;
+
+					&:hover {
+						@include linTran;
+						color: $secondary_color;
+					}
+				}
+			}
+		}
+	}
+
+	.left_nav {
+
+		> ul {
+			text-align: left;
+		}
+	}
+
+	.right_nav {
+
+		> ul {
+			left: auto;
+			right: 0;
+			text-align: right;
+		}
+	}
+
+	.mobile_nav, .mobile_nav_list {
+		display: none;
+	}
+
+	.logo {
+		text-align: center;
+		top: -10px;
+		width: 100%;
+		left: auto;
+
+		a {
+			max-width: 300px;
+			width: 30%;
+		}
+	}
+
+	.interior {
+
+		.header {
+			height: 40px;
+		}
+
+		.social {
+
+			li {
+
+				a {
+					font-size: 1.4rem;
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		.top_nav {
+
+			li {
+
+				a {
+					font-size: 1.1rem;
+					padding-top: 10px;
+				}
+			}
+		}
+
+		.main_nav {
+			height: 80px;
+
+			.left_nav {
+				height: 75px;
+			}
+
+			.right_nav {
+				height: 75px;
+			}
+
+			.logo {
+
+				a {
+					max-width: 150px;
+				}
+			}
+		}
+
+		.content {
+			padding-top: 20px;
+			
+			.row {
+				position: relative;
+				z-index: 10;
+			}
+		}		
+	}
+
+}
+
+/* large break */
+@media only screen and (min-width: 64.063em) {
+
+	.logo {
+		top: -15px;
+
+		a {
+			max-width: 480px;
+			width: auto;
+		}
+	}
+
+	.interior {
+
+		.left_nav ul {
+			text-align: center;
+		}
+
+		.right_nav ul {
+			text-align: center;
+		}
+	}
+
+}

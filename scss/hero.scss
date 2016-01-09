@@ -1,0 +1,113 @@
+@import "sass";
+
+.hero {
+	width: 100%;
+	display: none;
+}
+
+.hero_banner {
+	background-color: $fourth_color;
+	padding: 10px;
+
+	> h3 {
+		font-family: $primary_header;
+		text-transform: uppercase;
+		color: $primary_color;
+	}
+
+	> p {
+		color: $primary_color;
+	}
+}
+
+.slide {
+
+}
+
+.event_timer {
+	background-color: $fourth_color;
+	padding: 10px;
+	display: none;
+
+	p:first-of-type {
+		font-size: 1.4rem;
+		padding-bottom: 15px;
+	}
+
+	p {
+		@include nomopo;
+		color: $primary_color;
+	}
+}
+
+.testimonials {
+	background-color: $secondary_color;
+	height: 190px;
+	padding-top: 10px;
+	display: none;
+
+	> ul {
+		@include nomopo;
+		text-align: center;
+		height: 70px;
+		padding: 0 5px;
+
+		> li {
+			@include nomopo;
+			display: none;
+			font-family: $emphasis_text;
+			color: $fourth_color;
+			font-size: 1.6rem;
+			text-shadow: 1px 1px $primary_dark;
+			line-height: 110%;
+
+			> span {
+				display: block;
+				padding-top: 10px;
+			}
+		}
+	}
+}
+
+/* medium break */
+@media only screen and (min-width: 40.063em) {
+
+	.hero {
+		overflow: hidden;
+		position: relative;
+		max-height: 600px;
+		margin-top: -100px;
+		z-index: 1;
+		display: block;
+	}
+
+	.hero_banner {
+		@include fourth_color-bg(0.7);
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		width: 30%;
+		z-index: 10;
+	}
+
+	.event_timer {
+		@include fourth_color-bg(0.7);
+		display: block;
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		width: 25%;
+		z-index: 20;
+	}
+
+	.testimonials {
+		height: 120px;
+		display: block;
+	}
+
+}
+
+/* large break */
+@media only screen and (min-width: 64.063em) {
+
+}

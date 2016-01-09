@@ -1,0 +1,51 @@
+<section data-ng-controller="HomeController">
+
+	<!--============
+	header directive
+	==============-->
+	<header-directive></header-directive>
+	<!-- end header directive -->
+
+
+	<!--========
+	hero section
+	============-->
+	<div data-ng-hide="showInteriorPages">
+		<hero-directive></hero-directive>
+	</div>
+	<!-- end hero -->
+
+
+	<!--===============
+	testimonial section
+	================-->
+	<div data-ng-hide="showInteriorPages">
+		<testimonials-directive></testimonials-directive>
+	</div>
+	<!-- end testimonials -->
+
+
+	<!--============
+	features section
+	=============-->
+	<div data-ng-hide="showInteriorPages">
+		<features-directive></features-directive>
+	</div>
+	<!-- end features -->
+
+
+	<!--============
+	content section
+	=============-->
+	<div data-ng-show="showInteriorPages">
+		<content-directive></content-directive>
+	</div>
+	<!-- end content -->
+
+	<!--==========
+	footer section
+	===========-->
+	<footer-directive></footer-directive>
+	<!-- end footer -->
+
+</section>

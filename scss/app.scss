@@ -1,0 +1,323 @@
+/* ---------
+style guide:
+
+1.	foundation
+2.	global styles
+3.	global classes
+4.	header
+6.	hero
+7.	features
+8.	interaction
+9.	content
+10.	footer
+
+--------- */
+
+/* ---------
+
+--------- */
+
+/* ---------
+foundation
+--------- */
+@import "foundation";
+
+// sass styles - there shouldn't be anything here
+@import "sass";
+
+/* ---------
+global styles
+---------*/
+body {
+	@include primary_text;
+	color: $primary_dark;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+}
+
+h1 {
+	@include primary_header;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $primary-color;
+}
+
+h2 {
+	@include primary_header;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $secondary_color;
+}
+
+h3 {
+	@include primary_text;
+	font-weight: 300;
+	color: $primary-color;
+}
+
+h4 {
+	@include primary_header;
+	text-transform: uppercase;
+	color: $secondary_color;
+}
+
+h5 {
+	@include primary_text;
+	font-weight: 400;
+	color: $secondary_color;
+}
+
+h6 {
+	@include primary_header;
+	text-transform: uppercase;
+}
+
+p {
+	@include primary_text;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+}
+
+a {
+	color: $primary-color;
+
+	&:hover {
+		color: $secondary_color;
+	}
+}
+
+.emphasis {
+	font-style: italic;
+}
+.disclaimer {
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: inherit;
+}
+
+ul {
+	@include primary_text;
+	list-style-type: none;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+
+	li {
+
+		a {
+			color: inherit;
+		}
+	}
+}
+
+ol {
+	@include primary_text;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+
+	li {
+
+		a {
+			color: inherit;
+		}
+	}
+}
+
+form {
+
+	.error input, .error textarea, .error select {
+		margin-bottom: 16px;
+	}
+
+	label {
+		color: $secondary_color;
+		font-size: 1.2rem;
+		padding-bottom: 5px;
+	}
+
+	button {
+		background-color: $primary_color;
+
+		&:hover, &:focus {
+			background-color: $secondary_color;
+			color: $fourth_color;
+		}
+	}
+
+	textarea {
+		min-height: 150px;
+	}
+}
+
+/* global classes */
+.emphasis {
+	font-style: italic;
+}
+.disclaimer {
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: inherit;
+}
+
+/* pattern modeling */
+.atom_block {
+	@include box_sizing;
+	position: relative;
+	width: 90%;
+	min-height: 140px;
+	padding: 30px 10px;
+	margin: 20px auto;
+}
+
+.atomic_header {
+	width: 100%;
+	overflow: hidden;
+	background-color: $fourth_color;
+	box-shadow: 0 1px 7px $primary_dark;
+}
+
+.atomicH2 {
+	border-bottom: 1px solid $primary_dark;
+	margin-bottom: 30px;
+	padding: 25px 0 5px 10px;
+}
+
+.atomicNav {
+	padding: 10px 0;
+	margin: 0 0 20px;
+	width: 100%;
+	overflow: hidden;
+
+	> li {
+		@include nomopo;
+		float: left;
+		padding: 0 7px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+.atomic_height {
+	height: 700px !important;
+	width: 100%;
+	position: relative;
+	clear: both;
+	display: block;
+}
+.atomic_height_smaller {
+	height: 400px !important;
+	width: 100%;
+	position: relative;
+	clear: both;
+	display: block;
+}
+
+.atomic_hr {
+	width: 90%;
+	margin: 20px auto;
+	height: 0;
+	border-bottom: 1px solid $primary_dark;
+}
+
+/* backgrounds */
+.primary_color-bg {
+	background-color: $primary_color;
+}
+
+.secondary_color-bg {
+	background-color: $secondary_color;
+}
+
+.fourth_color-bg {
+	background-color: $fourth_color;
+}
+
+.primary_dark-bg {
+	background-color: $primary_dark;
+}
+
+.primary_gray-bg {
+	background-color: $primary_gray;
+}
+
+/* fonts */
+.primary_header_bold {
+	font-family: $primary_header;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: $primary_color;
+}
+.primary_header {
+	font-family: $primary_header;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: $primary_color;
+}
+.emphasis_text {
+	font-family: $emphasis_text;
+	font-size: 1.5rem;
+	color: $secondary_color;
+}
+.primary_text {
+	font-family: $primary_text;
+	font-size: 1.1rem;
+}
+.primary_text_light {
+	font-family: $primary_text;
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+span.red {
+	color: red;
+}
+
+/* medium break */
+@media only screen and (min-width: 40.063em) {
+
+	a {
+		@include linTran;
+
+		&:hover {			
+			@include linTran;
+			color: $secondary_color;
+			text-decoration: none;
+		}
+	}
+
+}
+
+/* large break */
+@media only screen and (min-width: 64.063em) {
+
+}
+
+/* ---------
+header
+--------- */
+@import "header";
+
+/* ---------
+hero
+--------- */
+@import "hero";
+
+/* ---------
+features
+--------- */
+@import "features";
+
+/* ---------
+interaction
+--------- */
+@import "interaction";
+
+/* ---------
+content
+--------- */
+@import "content";
+
+/* ---------
+footer
+--------- */
+@import "footer";

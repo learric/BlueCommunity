@@ -1,0 +1,32 @@
+
+	<!--==========
+	footer section
+	===========-->
+	<div class="footer">
+		<div class="row">
+
+			<div class="small-12 medium-6 columns">
+				<div class="footer_copy">
+					<p>{{ company }}</p>
+					<p>{{ addressOne }}<br />
+						{{ addressTwo }}<br />
+						{{ locale }}</p>
+					<p><a data-ng-href="{{ email }}" target="_blank">Email Us!</a></p>
+				</div> <!-- end footer copy -->
+			</div> <!-- end column -->
+
+			<div class="small-12 medium-6 columns">
+				<ul class="footer_nav">
+					<li data-ng-repeat="mainNav in mainNavList"><a data-ng-href="{{ mainNav.link }}">{{ mainNav.text }}</a></li>
+				</ul>
+
+				<ul class="footer_social">
+					<li><a data-ng-href="{{ socialLinkFacebook }}" title="{{ socialTitleFacebook }}" target="_blank"><span class="fa fa-facebook"></span></a></li>
+					<li><a data-ng-href="{{ socialLinkTwitter }}" title="{{ socialTitleTwitter }}" target="_blank"><span class="fa fa-twitter"></span></a></li>
+					<li><a data-ng-href="{{ socialLinkYoutube }}" title="{{ socialTitleYoutube }}" target="_blank"><span class="fa fa-youtube"></span></a></li>
+					<li><a data-ng-href="{{ socialLinkInstagram }}" title="{{ socialTitleInstagram }}" target="_blank"><span class="fa fa-instagram"></span></a></li>
+				</ul>
+			</div> <!-- end column -->
+
+		</div> <!-- end row -->
+	</div> <!-- end footer -->

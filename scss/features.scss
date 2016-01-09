@@ -1,0 +1,77 @@
+@import "sass";
+
+.features {
+	border-top: 1px solid $primary_dark;
+	border-bottom: 1px solid $primary_dark;
+	padding: 25px 0;
+}
+
+.feature_box {	
+	position: relative;
+	margin-bottom: 15px;
+
+	img {
+		display: none;
+	}
+
+	.feature_content {
+		text-align: center;
+
+		> h2 {
+			font-family: $emphasis_text;
+			color: $primary_color;
+			width: 90%;
+			border-bottom: 1px solid $primary_color;
+			margin: 0 auto 10px;
+			font-size: 2.6rem;
+			line-height: 110%;
+			padding: 10px 0 0;
+		}
+
+		> button {
+			@include linTran;
+			background-color: $primary_color;
+			color: $fourth_color;
+
+			&:hover {
+				@include linTran;
+				background-color: $secondary_color;
+			}
+		}
+	}
+}
+
+/* medium break */
+@media only screen and (min-width: 40.063em) {
+
+	.feature_box {
+		margin-bottom: 0;
+	}
+
+}
+
+/* large break */
+@media only screen and (min-width: 64.063em) {
+
+	.feature_box {
+		overflow: hidden;
+
+		.feature_content {
+			@include fourth_color-bg(0.75);
+			position: relative;
+			z-index: 1;
+			text-align: center;
+		}
+
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			display: block;
+		}
+
+	}
+
+}
